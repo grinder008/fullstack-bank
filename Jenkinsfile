@@ -7,6 +7,14 @@ pipeline{
             }
             
         }
+        stage("Deploying the app"){
+            steps{
+                dir('app'){
+                sh 'docker-compose up'
+                }
+            }
+            
+        }
     }
     
 }
